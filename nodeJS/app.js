@@ -1,8 +1,7 @@
 var express = require('express'),
 		session = require('express-session'),
 		app = express(),
-		path = require('path'),
-		bodyParser = require('body-parser');
+		path = require('path');
 
 app.use(session({
 	secret: '1234567890QWERTY',
@@ -11,13 +10,14 @@ app.use(session({
 }));
 const axios = require('axios');
 var ClientOAuth2 = require('client-oauth2')
- 
+require('dotenv').config()
+
 var auth = new ClientOAuth2({
-  clientId: '3390c897e9313d75feb7518f9aa8ea1024e200d81915588048d7b337f9758f57',
-  clientSecret: '34d02aeef7392d0d8adac92e29dc7631641ec3095539313691b6c3a52d58b259',
-  accessTokenUri: 'https://api.intra.42.fr/oauth/token',
-  authorizationUri: 'https://api.intra.42.fr/oauth',
-  redirectUri: 'http://localhost:3000/callback'
+  clientId: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET,
+  accessTokenUri: process.env.ACCESS_TOKEN_URI,
+  authorizationUri: process.env.AUTHORIZATION_URI,
+  redirectUri: process.env.REDIRECT_URI
 })
 
 app.set('view engine', 'ejs');
@@ -34,20 +34,16 @@ app.get('/callback', function (req, res) {
 });
 
 app.post('/request', function(req, res){
-
-	console.log(req.body.request);
 	var token = req.session.token;
 	if (token)
 	{
-		auth.oauth2.api('GET', req.body.request, {
-			access_token: token.token.access_token
-		}, function (err, data) {
-			if (err) {
-				console.log("Bad request.")
-				res.render(path.join(__dirname + '/request.ejs'), {req_ret: 'Bad request.'});
-			} else {
-				res.render(path.join(__dirname + '/request.ejs'), {req_ret: JSON.stringify(data)});
-			}
+		axios.get("https://api.intra.42.fr/v2/users", {
+			headers: { 'Authorization': 'Bearer ' + token }
+		}).then(function (response) {
+			console.log(response.data);
+		})
+		.catch(function (error) {
+			res.render(path.join(__dirname + '/request.ejs'), {me: '', req_ret: response.data});
 		});
 	}
 });
@@ -72,17 +68,6 @@ app.get('/request', function (req, res) {
 });
 
 app.get('/', function (req, res) {
-
-	var token = req.session.token;
-	if (token && token.expired()) {
-		token.refresh(function(err, res) {
-			if (err) {
-				token = -1;
-			} else {
-				token = res;
-			}
-		})
-	}
 	res.render(path.join(__dirname + '/index.ejs'));
 });
 
