@@ -8,11 +8,11 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 # install app dependencies
-COPY nodeJSAPI/package.json ./package.json
+COPY package.json ./package.json
 RUN npm install --silent
 
 # add app
-COPY nodeJSAPI/. ./
+COPY . ./
 
 EXPOSE  3000 
 # start app
