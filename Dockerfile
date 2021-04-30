@@ -16,4 +16,4 @@ COPY nodeJSAPI/. ./
 
 EXPOSE  3000 
 # start app
-CMD  node nodeJSAPI/app.js
+CMD  node app.js
