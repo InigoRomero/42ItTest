@@ -8,7 +8,7 @@ Docker-compose up
 ### Login
 ![Login](https://github.com/InigoRomero/42ItTest/blob/main/rubyOn/captures/Login.png)
 ### Auth
-![auth](https://github.com/InigoRomero/42ItTest/blob/main/rubyOn/captures/Auth.png)
+![auth](https://github.com/InigoRomero/42ItTest/blob/main/rubyOn/captures/auth.png)
 ### Home
-![home](https://github.com/InigoRomero/42ItTest/blob/main/rubyOn/captures/Home.png)
+![home](https://github.com/InigoRomero/42ItTest/blob/main/rubyOn/captures/home.png)
 ![home2](https://github.com/InigoRomero/42ItTest/blob/main/rubyOn/captures/Home2.png)
