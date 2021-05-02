@@ -8,7 +8,7 @@ Docker-compose up
 ### Login
 ![Login](https://github.com/InigoRomero/42ItTest/blob/main/nodeJS/captures/Login.png)
 ### Auth
-![auth](https://github.com/InigoRomero/42ItTest/blob/main/nodeJS/captures/auth.png)
+![auth](https://github.com/InigoRomero/42ItTest/blob/main/nodeJS/captures/Auth.png)
 ### Home
-![home](https://github.com/InigoRomero/42ItTest/blob/main/nodeJS/captures/home.png)
-![home](https://github.com/InigoRomero/42ItTest/blob/main/nodeJS/captures/home2.png)
+![home](https://github.com/InigoRomero/42ItTest/blob/main/nodeJS/captures/Home.png)
+![home](https://github.com/InigoRomero/42ItTest/blob/main/nodeJS/captures/Home2.png)
