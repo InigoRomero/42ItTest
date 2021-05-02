@@ -1,9 +1,12 @@
 # USAGE
 
-```docker
+```shell
 Docker-compose build
 Docker-compose up
+mv envEXAMPLE .env
 ```
+Fill .env with your credentials
+
 # APP CAPTURES
 ### Login
 ![Login](https://github.com/InigoRomero/42ItTest/blob/main/rubyOn/captures/Login.png)
