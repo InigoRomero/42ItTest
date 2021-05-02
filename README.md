@@ -5,3 +5,4 @@
 # Ruby Doc
 - https://docs.docker.com/samples/rails/
 - https://guides.rubyonrails.org/getting_started.html
+- https://github.com/oauth-xx/oauth2
