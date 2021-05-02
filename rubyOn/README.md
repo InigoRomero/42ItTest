@@ -6,8 +6,8 @@ Docker-compose up
 ```
 # APP CAPTURES
 ### Login
-![alt text](https://github.com/InigoRomero/42irTest/blob/master/captures/login.png)
+![Login](https://github.com/InigoRomero/42ItTest/blob/main/rubyOn/captures/Login.png)
 ### Auth
-![alt text](https://github.com/InigoRomero/42irTest/blob/master/captures/auth.png)
+![auth](https://github.com/InigoRomero/42ItTest/blob/main/rubyOn/captures/auth.png)
 ### Home
-![alt text](https://github.com/InigoRomero/42irTest/blob/master/captures/home.png)
+![home](https://github.com/InigoRomero/42ItTest/blob/main/rubyOn/captures/home.png)
