@@ -11,3 +11,5 @@
 # Laravel Doc
 - https://www.digitalocean.com/community/tutorials/como-configurar-laravel-nginx-y-mysql-con-docker-compose-es
 # Django Doc
+- https://docs.docker.com/samples/django/
+- https://docs.djangoproject.com/en/3.2/intro/tutorial01/
