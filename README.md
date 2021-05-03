@@ -9,7 +9,7 @@
 - https://github.com/oauth-xx/oauth2
 
 # Laravel Doc
-- https://www.digitalocean.com/community/tutorials/como-configurar-laravel-nginx-y-mysql-con-docker-compose-es
+- https://dev.to/lostdesign/how-to-run-laravel-in-docker-4e6o
 - https://github.com/thephpleague/oauth2-client
 # Django Doc
 - https://docs.docker.com/samples/django/
