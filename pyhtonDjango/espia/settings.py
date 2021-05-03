@@ -124,3 +124,17 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTHENTICATION_BACKENDS = (
+    'oauth2_login_client.backends.OAuthBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+...
+
+
+OAUTH_SERVER            = 'https://api.intra.42.fr'
+AUTHORIZATION_URI = 'https://api.intra.42.fr/oauth'   # Authorization URL
+ACCESS_TOKEN_URI         = 'https://api.intra.42.fr/oauth/token'      # Access token URL
+CLIENT_ID         = '3390c897e9313d75feb7518f9aa8ea1024e200d81915588048d7b337f9758f57'
+CLIENT_SECRET     = '34d02aeef7392d0d8adac92e29dc7631641ec3095539313691b6c3a52d58b259'
+REDIRECT_URI      = 'http://localhost:3000/callback'
