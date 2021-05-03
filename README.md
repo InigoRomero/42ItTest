@@ -13,4 +13,5 @@
 # Django Doc
 - https://docs.docker.com/samples/django/
 - https://docs.djangoproject.com/en/3.2/intro/tutorial01/
-- https://github.com/antechrestos/OAuth2Client
+- https://pypi.org/project/oauth2-client/
+- https://wiki.python.org/moin/HandlingExceptions
