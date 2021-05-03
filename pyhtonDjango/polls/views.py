@@ -5,6 +5,7 @@ from django.http import Http404
 from django.shortcuts import render
 from .models import Question
 from django.conf import settings
+from django.shortcuts import redirect
 import requests
 
 from oauth2_client.credentials_manager import CredentialManager, ServiceInformation, OAuthError
@@ -17,21 +18,23 @@ def index(request):
     
 def detail(request):
     code = request.GET["code"]
-    scopes = ['scope_1', 'scope_2']
-    service_information = ServiceInformation(settings.AUTHORIZATION_URI,
-                                            settings.ACCESS_TOKEN_URI,
-                                            settings.CLIENT_ID,
-                                            settings.CLIENT_SECRET,
-                                            scopes)
-    manager = CredentialManager(service_information)
-    redirect_uri = settings.REDIRECT_URI
-    manager.init_with_authorize_code(redirect_uri, code)
-    token = manager._access_token
-    #call to api with token
-    endpoint = "https://api.intra.42.fr/v2/me"
-    data = {"ip": "1.1.2.3"}
-    headers = {"Authorization": "Bearer " + token}
-
-    me = requests.get(endpoint, data=data, headers=headers).json()
+    try:
+        scopes = ['scope_1', 'scope_2']
+        service_information = ServiceInformation(settings.AUTHORIZATION_URI,
+                                                settings.ACCESS_TOKEN_URI,
+                                                settings.CLIENT_ID,
+                                                settings.CLIENT_SECRET,
+                                                scopes)
+        manager = CredentialManager(service_information)
+        redirect_uri = settings.REDIRECT_URI
+        manager.init_with_authorize_code(redirect_uri, code)
+        token = manager._access_token
+        ### call to API with token ###
+        endpoint = "https://api.intra.42.fr/v2/me"
+        data = {"ip": "1.1.2.3"}
+        headers = {"Authorization": "Bearer " + token}
+        me = requests.get(endpoint, data=data, headers=headers).json()
+    except OAuthError:
+        return (redirect('/'))
     return render(request, 'polls/detail.html', {'me': me})
     
