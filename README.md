@@ -10,7 +10,7 @@
 
 # Laravel Doc
 - https://dev.to/lostdesign/how-to-run-laravel-in-docker-4e6o
-- https://github.com/thephpleague/oauth2-client
+
 # Django Doc
 - https://docs.docker.com/samples/django/
 - https://docs.djangoproject.com/en/3.2/intro/tutorial01/

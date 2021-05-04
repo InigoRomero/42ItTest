@@ -11,7 +11,9 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
-        "league/oauth2-client": "^2.6"
+        "league/oauth2-client": "^2.6",
+        "macsidigital/laravel-oauth2-client": "^1.2",
+        "mehdibo/oauth2-fortytwo": "^0.1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

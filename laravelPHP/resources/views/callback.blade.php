@@ -1,1 +1,1 @@
-Hello, {{ $code }}
+<br>Hello, {{ $token }}
