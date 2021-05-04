@@ -1,3 +1,10 @@
+# 42 It Test
+Repositorio donde he practicando con la API de 42 las pruebas de 42 para ser IT.
+<br>
+Se trata de el codeflow que se define en la siguiente página: https://api.intra.42.fr/apidoc/guides/web_application_flow
+<br>
+Hecho en 4 Lenguajes diferentes
+
 # Node Doc
 - https://github.com/ebouther/NodeJs-API-42-Exemple
 - https://www.npmjs.com/package/client-oauth2
