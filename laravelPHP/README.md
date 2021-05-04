@@ -3,10 +3,9 @@
 ```shell
 mv .env.example .env
 Fill .env with your credentials
-Docker-compose build
 Docker-compose up
 ```
-Then open http://localhost:3000/ :)
+Then open http://localhost :)
 # APP CAPTURES
 ### Login
 ![Login](https://github.com/InigoRomero/42ItTest/blob/main/laravelPHP/captures/login.png)
