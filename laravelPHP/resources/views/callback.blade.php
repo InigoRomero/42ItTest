@@ -26,7 +26,7 @@
 	<body>
 	<div class="content text-center">
 			<h1>¿42 Nos espía?</h1>
-			<img src="https://raw.githubusercontent.com/InigoRomero/42ItTest/main/rubyOn/captures/Ruby_On_Rails_Logo.svg.png?token=AK5DQMYIFAGZFSJSKPZLLDDATFHAM" widt=160 height=90>
+			<img src="https://raw.githubusercontent.com/InigoRomero/42ItTest/main/laravelPHP/captures/icon.png?token=AK5DQM4B34JJO3I3QVVI7ODATKWCU" widt=120 height=80>
 			<p>by Iromero-</p>
 		</div>
 		<div class="row">
