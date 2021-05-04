@@ -22,7 +22,6 @@ class callbackController extends Controller
             'base_uri' => 'https://api.intra.42.fr',
             'timeout'  => 50000000.0,
         ]);
-        echo  env("REDIRECT_URI", "");
         $response = $client->request('POST', env("ACCESS_TOKEN_URI", ""), [
             'headers'  => [
                 'Content-Type' => 'application/json'
@@ -38,14 +37,13 @@ class callbackController extends Controller
         ]);
         $token = $response->getBody();
         $token = json_decode($token, true);
-        echo "Bearer " .$token["access_token"];
         $response = $client->request('GET', "https://api.intra.42.fr/v2/me", [
             'headers'  => [
                 'Authorization' => "Bearer " . $token["access_token"]
             ]
         ]);
 
-        return view('callback', ['token' => $response->getBody()]);
+        return view('callback', ['me' => json_decode($response->getBody()->getContents(), true)]);
     }
 
 }
