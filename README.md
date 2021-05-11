@@ -9,6 +9,11 @@ Hecho en 4 Lenguajes diferentes
 - Python -> Django
 - Ruby -> Ruby on rails
 
+![Login](https://github.com/InigoRomero/42ItTest/blob/main/laravelPHP/captures/login.png)
+![Login](https://github.com/InigoRomero/42ItTest/blob/main/nodeJS/captures/Login.png)
+![Login](https://github.com/InigoRomero/42ItTest/blob/main/pyhtonDjango/captures/login.png)
+![Login](https://github.com/InigoRomero/42ItTest/blob/main/rubyOn/captures/Login.png)
+
 <br><br>
 Acontinuación toda la documentación que he seguido para llevarlo a cabo (Según el conocimineto previo de cada lenguaje y framework he necesitado cosas diferentes)
 
