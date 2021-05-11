@@ -1,7 +1,7 @@
-# 42 It Test
+# 42 Web Application Flow
 Repositorio donde he practicando con la API de 42 las pruebas de 42 para ser IT.
 <br>
-Se trata de el codeflow que se define en la siguiente página: https://api.intra.42.fr/apidoc/guides/web_application_flow
+Se trata de el Web Application Flow que se define en la siguiente página: https://api.intra.42.fr/apidoc/guides/web_application_flow
 <br>
 Hecho en 4 Lenguajes diferentes
 - PHP -> Laravel
