@@ -41,11 +41,6 @@ app.get('/request', async function (req, res) {
 		res.redirect('/');
 	else
 	{
-		//check if token is expired
-		if (Date.now() >= req.session.expires_in + req.session.created_at)
-		{
-			
-		}
 		var token = req.session.token;
 		axios.get("https://api.intra.42.fr/v2/me", {
 			headers: {
@@ -54,7 +49,8 @@ app.get('/request', async function (req, res) {
 		  }).then(function (response) {
 			res.render(path.join(__dirname + '/home.ejs'), {me: response.data, req_ret: ''});
 		  })
-		  .catch(function (error) { // if we got an error, we going to try to refresh the token
+		  .catch(function (error) { 
+			  // if we got an error, we going to try to refresh the token
 			  /*if (req.session.refresh){
 				axios.post(process.env.ACCESS_TOKEN_URI, {
 					headers: {
